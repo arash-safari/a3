@@ -1,43 +1,43 @@
 import * as d3 from 'd3'
+import axis from './Axis'
+// class a3{
+//     //config data 
+//     /* 
+//         {
+//             padding 
+//             margin 
+//             padding axis
+//         }
+//     */
 
-class a3{
-    //config data 
-    /* 
-        {
-            padding 
-            margin 
-            padding axis
-        }
-    */
+//     /*
+//         // consts 
+//         RIGHT
+//         LEFT
+//         TOP
+//         BOTTOM
+//         LINEAR
+//         LOG
+//     */
 
-    /*
-        // consts 
-        RIGHT
-        LEFT
-        TOP
-        BOTTOM
-        LINEAR
-        LOG
-    */
+//     //******** create a svg geting a tag id 
+//     // setBody("id");
 
-    //******** create a svg geting a tag id 
-    // setBody("id");
-
-    //******** create axises for chart
-    // addAxis();
-    // createAxis("data element key","scaleType","label","right");
+//     //******** create axises for chart
+//     // addAxis();
+//     // createAxis("data element key","scaleType","label","right");
     
-    // get svg 
-    // getSVG(){return svg};
+//     // get svg 
+//     // getSVG(){return svg};
 
-    //set data 
-    // data(data);
+//     //set data 
+//     // data(data);
 
-    //add chart 
-    // addChart(chart class);
+//     //add chart 
+//     // addChart(chart class);
 
-    //dragable (defualt = true)
-    // dragable(true);
-}
+//     //dragable (defualt = true)
+//     // dragable(true);
+// }
 
-export default a3;
+export const axis ;
