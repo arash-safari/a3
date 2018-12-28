@@ -15,25 +15,25 @@ const defaultFomrat = {
 }
 
 function axis(scale, direction) {
-    let maxis;
-    switch (direction) {
-        case top:
-            maxis = d3.axisTop(scale);
-            break;
-        case right:
-            maxis = d3.axisRight(scale);
-            break;
-        case left:
-            maxis = d3.axisLeft(scale);
-            break;
-        case bottom:
-            maxis = d3.axisBottom(scale);
-            break;
-        default:
-            maxis = d3.axisBottom(scale);
-            break;
-    }
-    applyFormat()
-    return maxis;
+    const mAxis = changeAxis(scale,direction);
+    
+    
+
+    function changeAxis(scale,direction) {
+        switch (mDirection) {
+            case top:
+                return d3.axisTop(mScale);
+            case right:
+                return d3.axisRight(mScale);
+            case left:
+                return  d3.axisLeft(mScale);
+            case bottom:
+                return d3.axisBottom(mScale);
+            default:
+                return d3.axisBottom(mScale);
+        }    
+    };
+    return mAxis;
 }
+
 export const axis;
