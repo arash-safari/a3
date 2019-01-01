@@ -3,12 +3,13 @@ import Chart from './chart/Chart';
 import { BAxis, LAxis } from './chart/Axis';
 import { SimpleRect } from './chart/SimpleElements';
 import * as d3 from 'd3'
-export default function test() {
+export default function Test() {
     const margin = 50;
     const originWidth = 1000;
     const originHeight = 600;
-    const width = originWidth - 2 * margin;
-    const height = originHeight - 2 * margin;
+    const padding =30;
+    const width = originWidth - 2 * margin - 2*padding;
+    const height = originHeight - 2 * margin - 2*padding;
     const data = [{ value: 1, key: 1 }, { value: 2, key: 2 }];
     const xScale = d3.scaleBand()
         .range([0, width])
@@ -21,14 +22,10 @@ export default function test() {
 
     return (
         <div style={{ width: originWidth, height: originHeight, background: "#BDBDBD" }}>
-            <Chart transform={`translate(${margin}, ${margin})`}>
-                <BAxis scale={xScale} transform={`translate(0, ${height})`} />
-                <LAxis scale={yScale} />
-                {data.map(d => <SimpleRect
-                    x={d.value}
-                    y={d.value}
-                    width={xScale.bandwidth()}
-                    height={height - yScale(d.value)} />)}
+            <Chart margin={margin}>
+                <BAxis scale={xScale} x={padding} y={height} />
+                <LAxis scale={yScale} x={padding} />
+                
             </Chart>
         </div>
     )
