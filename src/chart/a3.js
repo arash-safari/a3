@@ -1,5 +1,5 @@
-import * as d3 from 'd3'
-import axis from './Axis'
+// import * as d3 from 'd3'
+// import axis from './Axis'
 // class a3{
 //     //config data 
 //     /* 
@@ -40,4 +40,4 @@ import axis from './Axis'
 //     // dragable(true);
 // }
 
-export const axis ;
+// export const axis ;
