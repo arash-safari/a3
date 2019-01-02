@@ -10,13 +10,16 @@ class Chart extends Component {
         // console.log(d3.select(this.props.root))
 
         return (
-            <div style={{padding:this.props.margin,width:'100%',height:'100%'}}>
-            <svg id="arash-chart" width={`calc(100% - ${(this.props.margin?2*this.props.margin:0)+'px'})`} 
-            height={`calc(100% -  ${(this.props.margin?2*this.props.margin:0)+'px'})`}>
-                {React.Children.map(this.props.children, (element, idx) => {
-                    return React.cloneElement(element, { ref: idx });
-                })}
-            </svg>
+            <div style={{padding:this.props.margin,
+                width:`calc(100% - ${(this.props.margin?2*this.props.margin:0)+'px'})`,
+                height:`calc(100% - ${(this.props.margin?2*this.props.margin:0)+'px'})`}}>
+                <svg id="arash-chart" width={'100%'} height={'100%'}>
+                    {/* <g transform={`translate( ${this.props.margin?this.props.margin:0} ,${this.props.margin?this.props.margin:0} )`}> */}
+                    {React.Children.map(this.props.children, (element, idx) => {
+                        return React.cloneElement(element, { ref: idx });
+                    })}
+                    {/* </g> */}
+                </svg>
             </div>
         )
     }

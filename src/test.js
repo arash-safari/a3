@@ -23,9 +23,8 @@ export default function Test() {
     return (
         <div style={{ width: originWidth, height: originHeight, background: "#BDBDBD" }}>
             <Chart margin={margin}>
-                <BAxis scale={xScale} x={padding} y={height} />
-                <LAxis scale={yScale} x={padding} />
-                
+                <BAxis scale={xScale} x={padding} y={height+padding} />
+                <LAxis scale={yScale} x={padding} y={padding}/>  
             </Chart>
         </div>
     )
